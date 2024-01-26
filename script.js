@@ -1,6 +1,6 @@
 
 
-var timmer = 6;
+var timer = 6;
 var score = 0;
 var hitnum = 0;
 
@@ -11,16 +11,26 @@ function hitvalue() {
 
 function timevalue() {
     const timeInterval = setInterval(() => {
-        if (timmer > 0) {
-            timmer--;
-            document.querySelector('#timeval').textContent = timmer
+        if (timer > 0) {
+            timer--;
+            document.querySelector('#timeval').textContent = timer
         } else {
-            document.querySelector('#pbottom').innerHTML = `<h1 id='gover'>Game Over <br/>score:${score}</h1>`
+            document.querySelector('#pbottom').innerHTML = `
+            <div>
+            <h1 id='gover'>Game Over <br/>score:${score}<br/></h1>
+            <button id="newbtn">New Game</button>
+            </div>
+            `;
+            newgame();
+            clearInterval(timeInterval);
         }
-    }, 1000)
+    }, 1000);
 
-    return () => clearInterval(timeInterval)
+
+    // return () => clearInterval(timeInterval)
 }
+
+
 
 function scorevalue() {
     score += 10;
@@ -45,6 +55,13 @@ document.querySelector('#pbottom').addEventListener('click', (dets) => {
         makeBubble();
     }
 })
+
+function newgame() {
+    document.querySelector('#newbtn').addEventListener('click', () => {
+        // console.log('hello')
+        window.location.reload()
+    })
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     makeBubble();
