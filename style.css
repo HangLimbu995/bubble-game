@@ -1,0 +1,110 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(174, 231, 212);
+}
+
+#pannel {
+  position: relative;
+  width: 80%;
+  height: 90%;
+  background-color: rgb(115, 177, 157);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#ptop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25%;
+  height: 75px;
+  width: 100%;
+  background-color: rgb(112, 184, 121);
+}
+
+#con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 15%; */
+  gap: 5px;
+  padding: 5px;
+}
+
+.box {
+  display: flex;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#pbottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100% - 75px);
+  gap: 5px;
+  padding: 15px;
+}
+
+.ball {
+  position: relative;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(25, 88, 36);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.ball:hover {
+  transform: scale(1.1);
+  margin-top: 1px;
+  font-size: 19px;
+  background-color: rgb(18, 60, 25);
+}
+
+#gover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  /* text-decoration: underline; */
+  color: rgb(34, 113, 87);
+}
