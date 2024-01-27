@@ -1,6 +1,6 @@
 
 
-var timer = 6;
+var timer = 60;
 var score = 0;
 var hitnum = 0;
 
